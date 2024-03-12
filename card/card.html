@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8097ade54d.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <title>Products</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="nav">
+        <div class="logo">
+            <a href="../index.html">
+                <h2>THRI<span id="logo">FT <i class="fa fa-shopping-cart" aria-hidden="true"></i> ST</span>ORE </h2>
+            </a>
+        </div>
+        <div class="nav-icons">
+            <!-- Input ADDED FOR SEARCH BAR BY ME -->
+            <input id="search-item" onkeyup="search()" />
+            <i class="fa fa-search cross2-icon" id="search-icon" aria-hidden="true" onclick="search()"
+                title="search"></i>
+            <i class="fa fa-shopping-bag" id="cart" aria-hidden="true" title="checkout"></i>
+            <a href="../About us/about us.html"><i class="fa fa-info-circle" aria-hidden="true"
+                title="about Us"></i></i></a>
+            <a href="../contact us/contactus.html"><i class="fa fa-envelope-open-o" aria-hidden="true"
+                    title="contact"></i></a>
+            <a href="../Login/login.html"><i class="fa fa-user" aria-hidden="true" title="login"></i></a>
+        </div>
+    </section>
+    <div class="cart-show" id="cart-show">
+        <i class="fa fa-times" id="cross" aria-hidden="true"></i>
+        <ul id="add">
+            <!-- Things are adding here please dont put your nose here -->
+        </ul>
+
+        <button onclick=buy() id="buttonbuy">Buy Now</button>
+        <span style="color: white; margin-left: 100px;">Total: <span id="totalPrice"> 00$ </span></span>
+
+
+    </div>
+    <!-- shoes Products -->
+    <div class="main " id="products-list">
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes9.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Fashion</h1>
+                    <span class="card-price">$<span id="price_product">69</span></span>
+                    <span class="card-price retaing">7/10</span>
+                    <p class="card-description">Nike Fashion Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes1.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Air Jordan</h1>
+                    <span class="card-price">$<span id="price_product">99</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike Air Jordan Footwear Basketball Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes2.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma Sneakers</h1>
+                    <span class="card-price">$<span id="price_product">48</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Puma shoes Footwear sports Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes6.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Air Jordan 1</h1>
+                    <span class="card-price">$<span id="price_product">199</span></span>
+                    <span class="card-price retaing">10/10</span>
+                    <p class="card-description">Nike Air Jordan1 Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes3.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Sports</h1>
+                    <span class="card-price">$<span id="price_product">66</span></span>
+                    <span class="card-price retaing">4/10</span>
+                    <p class="card-description">Nike Sports Footwear cricket Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes4.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Reebook</h1>
+                    <span class="card-price">$<span id="price_product">88</span></span>
+                    <span class="card-price retaing">2/10</span>
+                    <p class="card-description">Reebook Footwear football Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes5.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas</h1>
+                    <span class="card-price">$<span id="price_product">33</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Adidas Footwear sports Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes6.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Air Jordan 1</h1>
+                    <span class="card-price">$<span id="price_product">199</span></span>
+                    <span class="card-price retaing">10/10</span>
+                    <p class="card-description">Nike Air Jordan1 Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes6.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Air Jordan</h1>
+                    <span class="card-price">$<span id="price_product">28</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike Air Jordan Footwear Basketball Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes7.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Fashion</h1>
+                    <span class="card-price">$<span id="price_product">299</span></span>
+                    <span class="card-price retaing">5/10</span>
+                    <p class="card-description">Nike Fashion Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes8.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Fashion</h1>
+                    <span class="card-price">$<span id="price_product">109</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike Fashion Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes9.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Fashion</h1>
+                    <span class="card-price">$<span id="price_product">69</span></span>
+                    <span class="card-price retaing">7/10</span>
+                    <p class="card-description">Nike Fashion Footwear Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes10.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Fashion</h1>
+                    <span class="card-price">$<span id="price_product">19</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Nike Fashion Footwear Basketball Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes11.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike joggers</h1>
+                    <span class="card-price">$<span id="price_product">4</span></span>
+                    <span class="card-price retaing">4/10</span>
+                    <p class="card-description">Nike joggers Footwear jogging Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/shoes/shoes12.png" class="card-img shoes-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas Sneakers</h1>
+                    <span class="card-price">$<span id="price_product">15</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Adidas Footwear cricket Sneakers.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/1.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Pant</h1>
+                    <span class="card-price">$<span id="price_product">5</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike Body Wear Pant For Men.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/2.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Pant</h1>
+                    <span class="card-price">$<span id="price_product">4</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Nike pant For Men Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/11.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Pant</h1>
+                    <span class="card-price">$<span id="price_product">6</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Nike pant for Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/4.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas Pant</h1>
+                    <span class="card-price">$<span id="price_product">70</span></span>
+                    <span class="card-price retaing">5/10</span>
+                    <p class="card-description">Adidas Pant For Men Body wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/5.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas Pant</h1>
+                    <span class="card-price">$<span id="price_product">48</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Adidas Pant For Men Body wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/6.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma Pant</h1>
+                    <span class="card-price">$<span id="price_product">4</span></span>
+                    <span class="card-price retaing">10/10</span>
+                    <p class="card-description">Puma Pant For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/7.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas Pant</h1>
+                    <span class="card-price">$<span id="price_product">56</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Adidas pant For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/1.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Pant</h1>
+                    <span class="card-price">$<span id="price_product">52</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Nike for Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/5.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike T_Shirts</h1>
+                    <span class="card-price">$<span id="price_product">44</span></span>
+                    <span class="card-price retaing">6/10</span>
+                    <p class="card-description">Nike T-Shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/2.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike Pant</h1>
+                    <span class="card-price">$<span id="price_product">2</span></span>
+                    <span class="card-price retaing">4/10</span>
+                    <p class="card-description">Nike For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/11.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma Pant</h1>
+                    <span class="card-price">$<span id="price_product">34</span></span>
+                    <span class="card-price retaing">7/10</span>
+                    <p class="card-description">Puma Pant For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/Pants/12.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma Pant</h1>
+                    <span class="card-price">$<span id="price_product">4</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike Pant For Men Body Wear..</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/1.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike T-shirts</h1>
+                    <span class="card-price">$<span id="price_product">5</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Nike t-shirts Body Wear..</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/2.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike T-shirts</h1>
+                    <span class="card-price">$<span id="price_product">9</span></span>
+                    <span class="card-price retaing">6/10</span>
+                    <p class="card-description">Nike T-Shirts For Men Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/3.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike T-shirts</h1>
+                    <span class="card-price">$<span id="price_product">6</span></span>
+                    <span class="card-price retaing">6/10</span>
+                    <p class="card-description">Nike t-Shirts for Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/4.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">7</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Adidas t-shirts For Men Body wear</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/5.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">97</span></span>
+                    <span class="card-price retaing">2/10</span>
+                    <p class="card-description">Adidas T-shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/6.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">9</span></span>
+                    <span class="card-price retaing">10/10</span>
+                    <p class="card-description">Adidas T-Shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/7.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">56</span></span>
+                    <span class="card-price retaing">5/10</span>
+                    <p class="card-description">Adidas T-Shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/8.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">44</span></span>
+                    <span class="card-price retaing">7/10</span>
+                    <p class="card-description">Adidas T-Shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/9.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Nike T_Shirts</h1>
+                    <span class="card-price">$<span id="price_product">4</span></span>
+                    <span class="card-price retaing">10/10</span>
+                    <p class="card-description">Nike T-Shirts For Men Body Wear</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/10.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Adidas t-shirts</h1>
+                    <span class="card-price">$<span id="price_product">66</span></span>
+                    <span class="card-price retaing">8/10</span>
+                    <p class="card-description">Adidas T-Shirts For Men Body Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/11.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma T-Shirts</h1>
+                    <span class="card-price">$<span id="price_product">99</span></span>
+                    <span class="card-price retaing">1/10</span>
+                    <p class="card-description">Nike T-Shirts For Men BOdy Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/12.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma T-Shirts</h1>
+                    <span class="card-price">$<span id="price_product">9</span></span>
+                    <span class="card-price retaing">5/10</span>
+                    <p class="card-description">Nike T-Shirts For Men BOdy Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/13.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma T-Shirts</h1>
+                    <span class="card-price">$<span id="price_product">19</span></span>
+                    <span class="card-price retaing">9/10</span>
+                    <p class="card-description">Nike T-Shirts For Men BOdy Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="container products">
+            <div class="card">
+                <img src="./img/tees/14.png" class="card-img">
+                <div class="card-data">
+                    <h1 class="card-title">Puma T-Shirts</h1>
+                    <span class="card-price">$<span id="price_product">39</span></span>
+                    <span class="card-price retaing">3/10</span>
+                    <p class="card-description">Nike T-Shirts For Men BOdy Wear.</p>
+                    <button class="card-button" onclick="getValue(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="row2">
+            <div class="col2">
+                <h1 class="logo2">Thrift Store</h1>
+                <p>
+                    Start Selling On Poshmark's Fashion Marketplace And See Why More People Resell On Poshmark. Poshmark
+                    is the #1 online fashion marketplace where you can buy and sell almost anything.
+                    Millions Of Shoppers. Easy Shipping. Hassle Free Selling. Now In Canada.
+                </p>
+            </div>
+            <div class="col2">
+                <h3>Office <div class="underline"><span></span></div>
+                </h3>
+                <p>
+                    22nd Floor, Sky Tower, </p>
+                <p>Dolmen City, Block 4,</p>
+                <p>Karachi, Pakistan.</p>
+                <p class="email">asadaseess9@gmail.com</p>
+                <h4> 03181155585</h4>
+            </div>
+            <div class="col2">
+                <h3>Links<div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../About us/about us.html">About us</a></li>
+                    <li><a href="./card.html">Products</a></li>
+                    <li><a href="../Login/login.html">Login</a></li>
+                    <li><a href="../contact us/contactus.html">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col2">
+                <h3>Newsletter<div class="underline"><span></span></div>
+                </h3>
+                <form class="footerform">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="socialmedia">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+</body>
+<script src="./cart.js"></script>
+
+</html>
